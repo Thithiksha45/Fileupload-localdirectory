@@ -1,0 +1,155 @@
+/* src/styles.css */
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ad7eb8, #cfda95);
+  }
+  
+  .app-container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .app-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .app-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .app-header h1 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .app-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .upload-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .upload-form input[type="file"] {
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .upload-form input[type="file"]:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .upload-button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .upload-form button {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .upload-form button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .upload-form button:hover:not(:disabled) {
+    background-color: #0056b3;
+    transform: scale(1.02);
+  }
+  
+  .upload-form button:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+  
+  .progress, .error, .file-url {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .error {
+    color: #e74c3c;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .file-url {
+    margin-top: 10px;
+  }
+  
+  .file-url a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .file-url a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .app-container {
+      padding: 20px;
+      max-width: 90%;
+    }
+  
+    .app-header h1 {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .app-container {
+      padding: 15px;
+      max-width: 100%;
+    }
+  
+    .app-header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .upload-form input[type="file"], 
+    .upload-form button {
+      width: 100%;
+    }
+  }
+  
